@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./PrevTripCard.css";
-import "../InfoCard/InfoCard.css";
 // This component relies on Infocard. Will update that is merged.
+// import "../InfoCard/InfoCard.css";
 // import InfoCard from "../InfoCard";
-// import "../../App.css";
+import "../../App.css";
 
 // Function based React Component
 const PrevTripCard = props => {
