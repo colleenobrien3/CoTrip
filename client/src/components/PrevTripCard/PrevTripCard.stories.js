@@ -4,6 +4,6 @@ import PrevTripCard from './PrevTripCard';
 
 storiesOf('PrevTripCard', module)
   .add("Default", () => (
-    <PrevTripCard />
+    <PrevTripCard to="/route" />
   )
 )
