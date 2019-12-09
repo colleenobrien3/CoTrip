@@ -29,9 +29,9 @@ const PrevTripCard = props => {
               Year
             </div>
           </div>
+          <div className="yellow-nav"></div>
         </div>
       </div>
-      <div className="yellow-nav"></div>
     </div>
   );
 };

@@ -23,6 +23,7 @@
 
 .prev-trip-images {
   display: flex;
+  align-items: center;
   width: 445;
 }
 
@@ -60,5 +61,8 @@
 }
 
 .yellow-nav {
-  background-image: var(--nav-arrow-yellow)
+  background-image: var(--nav-arrow-yellow);
+  height: 40px;
+  width: 28px;
+  margin-left: 8px;
 }
