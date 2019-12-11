@@ -31,8 +31,14 @@
     width: 20%;
 }
 
-@media only screen and (max-width:1000px) {
-
+/* Touch screen devices */
+@media (hover: none) and (pointer: coarse) {
+}
+/* Extra Large devices */
+@media only screen and (max-width: 1200px) {
+}
+/* Large devices */
+@media only screen and (max-width: 992px) {
     .Footer {
         height: 75px;
     }
@@ -43,8 +49,11 @@
         line-height: 20px;
     }
 }
-
-@media only screen and (max-width: 400px) {
+/* Medium devices */
+@media only screen and (max-width: 768px) {
+}
+/* Small large devices */
+@media only screen and (max-width: 576px) {
     .Footer {
         flex-direction: column;
         justify-content: center;
