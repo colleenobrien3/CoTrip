@@ -9,18 +9,18 @@ import Button from "../Button/Button";
 // Function based React Component
 const OnboardingThree = props => {
   // Default Class to apply to Component
-  let classList = `onboarding-three`;
+  let classList = `OnboardingThree`;
 
   return (
     <div className={classList}>
       <OnboardingParent>
-        <h1 className="onboarding-three-text">Step Three: Personalize Your Profile (optional)</h1>
-
+        <h1 className="OnboardingThree__text">Step Three: Personalize Your Profile (optional) </h1>
         <ProfilePicture className="profile-image" type="medium" to="#" image={Image} />
-        <InputTextField className="input" type="text" name="age" placeholder="What is your age?" />
+        <div className="OnboardingThree__spacer"></div>
+        <InputTextField type="text" name="age" placeholder="What is your age?" />
         <InputTextField type="destination" placeholder="What is your dream destination(s)?" />
         <Button text="Finish"></Button>
-        <Link to={props.link} className="onboarding-three-link">
+        <Link to={props.link} className="OnboardingThree__link">
           Skip
         </Link>
       </OnboardingParent>
