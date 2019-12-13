@@ -1,15 +1,3 @@
-/* .OnboardingThree {
-  max-width: 100vw;
-  max-height: 100vh;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 68.23%, rgba(255, 255, 255, 0.75) 100%),
-    var(--yellow);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  font-family: var(--default-font);
-} */
-
 .OnboardingThree__spacer {
   margin-bottom: 20px;
 }
