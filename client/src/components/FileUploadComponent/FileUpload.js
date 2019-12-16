@@ -6,7 +6,8 @@ class FileUpload extends Component {
     super(props)
 
     this.state = {
-      file: null
+      file: null,
+      render: null
     }
 
     this.handleChange = this.handleChange.bind(this)
