@@ -12,6 +12,7 @@ psycopg2-binary = "*"
 autopep8 = "*"
 djangorestframework-simplejwt = "*"
 djangorestframework-jwt = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "*"
