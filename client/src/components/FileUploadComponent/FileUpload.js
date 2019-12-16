@@ -14,35 +14,47 @@ class FileUpload extends Component {
   }
 
   handleChange(evt) {
-    this.setState({file: evt.target.files[0]}, this.props.handleFile)
+    evt.preventDefault()
+    evt.persist()
+    console.log(evt)
+    this.setState({ 
+      file: evt.target.files[0],
+      render: <img src={evt.target.value}></img>
+     })
+  }
+
+  componentDidMount() {
+    if (this.props.context) {
+      this.setState({
+        render:
+          <div className='NewUserUpload'>
+            <p>{this.props.header}</p>
+            <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
+            <input onChange={this.handleChange} accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
+          </div>
+      })
+    } else {
+      this.setState({
+        render:
+          <div>
+            <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
+            <input accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
+          </div>
+      })
+    }
   }
 
   render() {
-    return (
-      <>
-        {
-          this.props.context ?
-            <div className='NewUserUpload'>
-              <p>{this.props.header}</p>
-              <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
-              <input onChange={this.handleChange} accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
-            </div>
-            :
-            <div>
-              <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
-              <input onChange={this.handleChange} accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
-            </div>
-        }
-      </>
-
-    )
+    return this.state.render
   }
 }
 
 FileUpload.defaultProps = {
   buttonLabel: 'Browse Files',
   fileType: 'image/*',
-  handleFile: () => console.log("function handles the file")
+  handleFile: () => {
+    console.log("function handles the file")
+  }
 }
 
 export default FileUpload;
