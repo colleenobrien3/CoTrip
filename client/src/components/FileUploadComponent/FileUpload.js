@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './FileUpload.css'
+import ProfilePicture from '../ProfilePicture/ProfilePicture'
 
 class FileUpload extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class FileUpload extends Component {
     console.log(evt)
     this.setState({ 
       file: evt.target.files[0],
-      render: <img src={evt.target.value}></img>
+      render: <ProfilePicture type="medium" image={URL.createObjectURL(evt.target.files[0])}></ProfilePicture>
      })
   }
 
