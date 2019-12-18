@@ -1,4 +1,4 @@
-import React, { Component, Route } from 'react';
+import React, { Component } from 'react';
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Button from "../../components/Button/Button";
 import Logo from "../../components/Logo/Logo";
@@ -11,12 +11,14 @@ export default class LoginPage extends Component {
   }
 
   handleChange = (e) => {
+    e.preventDefault();
     this.setState({[e.target.name]: e.target.value});
     console.log(this.state);
   }
 
   handleLogin = (e) => {
     e.preventDefault();
+    // return <Redirect to="/home" />;
   }
 
   render() {
