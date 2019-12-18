@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Route } from 'react';
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Button from "../../components/Button/Button";
 import Logo from "../../components/Logo/Logo";
@@ -13,6 +13,10 @@ export default class LoginPage extends Component {
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value});
     console.log(this.state);
+  }
+
+  handleLogin = (e) => {
+    e.preventDefault();
   }
 
   render() {
