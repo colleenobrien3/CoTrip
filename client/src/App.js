@@ -42,6 +42,7 @@ class App extends Component {
         <main>
           <Route path="/" exact component={SplashPage}></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
+          <Route path="/member_profile" exact component={ComingSoonPage}></Route>
         </main>
       </div>
     );
